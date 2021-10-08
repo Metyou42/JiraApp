@@ -1,0 +1,34 @@
+{
+  "name": "Test add-on",
+  "description": "This your first jira add-on",
+  "key": "test-addon",
+  "baseUrl": "https://37ea-188-163-121-119.ngrok.io",
+  "vendor": {
+    "name": "Anrii",
+    "url": "https://37ea-188-163-121-119.ngrok.io"
+  },
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/instaled"
+  },
+  "links": {
+    "self": "https://37ea-188-163-121-119.ngrok.io/atlassian-connect.json",
+    "homepage": "https://37ea-188-163-121-119.ngrok.io/atlassian-connect.json"
+  },
+  "scopes": ["READ", "ACT_AS_USER", "WRITE"],
+  "apiVersion": 3,
+  "modules": {
+    "generalPages": [
+      {
+        "url": "/main",
+        "key": "main-page",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "Table"
+        }
+      }
+    ]
+  }
+}

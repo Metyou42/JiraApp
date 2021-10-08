@@ -1,0 +1,39 @@
+<section id='content' class='ac-content'>
+
+    <br />
+    <div class='center'>
+        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Filter</a>
+
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href='/main'>Default filter</a></li>
+            {{#each filters}}
+                <li><a href='/main?filter={{this}}'>{{this}}</a></li>
+            {{/each}}
+        </ul>
+
+    </div>
+    <table class='centered'>
+        <thead>
+            <tr>
+                <th>Assignee</th>
+                {{#each status}}
+                    <th>{{this}}</th>
+                {{/each}}
+            </tr>
+        </thead>
+        {{#if mainArr.length}}
+            <tbody>
+                {{#each mainArr}}
+                    <tr>
+                        <td>{{name}}</td>
+                        {{#each isusses}}
+                            <td><a target='_top' href='{{link}}'>{{value}}</a></td>
+                        {{/each}}
+                    </tr>
+                {{/each}}
+            </tbody>
+        {{else}}
+        {{/if}}
+    </table>
+
+</section>
